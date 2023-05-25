@@ -23,9 +23,21 @@
 // Un secondo è composto da 1000 millisecondi. /// 1000
 
 
-let actualTime = Date.now();
-
-console.log(actualTime);
 
 
-  
+
+
+
+
+let currentDate = new Date();
+
+let currentHour = currentDate.getHours();
+
+let currentMinutes = currentDate.getMinutes();
+
+let currentSeconds = currentDate.getSeconds();
+
+console.log(currentDate.getSeconds());
+
+
+// console.log(moonLanding.getFullYear());
