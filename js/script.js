@@ -61,6 +61,20 @@ countdown.getSeconds(0);
 
 // creo una funzione che trova la differenza tra currentDate countdown
 
+
 function timeLeft (){
-    let differenceTime = countdown.getTime() - currentDate.getTime();
+    let differenceTime = countdown - currentDate;
+
+    let remainingDay = Math.floor(differenceTime / (1000 * 60 * 60 * 24));
+    let remainingHours = Math.floor((differenceTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let remainingMinutes = Math.floor((differenceTime % (1000 * 60 * 60)) / (1000 * 60));
+    let remainingSeconds = Math.floor((differenceTime % (1000 * 60)) / 1000);
+
+    let countdownElement = document.getElementById('Timer');
+    countdownElement.innerHTML = remainingDay + remainingHours + remainingMinutes + remainingSeconds;
+  
 }
+timeLeft()
+
+
+
