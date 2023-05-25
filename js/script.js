@@ -25,19 +25,42 @@
 
 
 
-
+// prendo il tempo attuale
+// prendo il giorno
+// prendo il l'ora
+// prendo i minuti
+// prendo i secondi
 
 
 
 let currentDate = new Date();
 
-let currentHour = currentDate.getHours();
+currentDate.getDate();
 
-let currentMinutes = currentDate.getMinutes();
+currentDate.getHours();
 
-let currentSeconds = currentDate.getSeconds();
+currentDate.getMinutes();
 
-console.log(currentDate.getSeconds());
+currentDate.getSeconds();
 
 
-// console.log(moonLanding.getFullYear());
+// prendo il giorno del countdown quindi domani
+// prendo l'ora del countdown alle 9
+// prendo i minuti del countdown alle 9:30
+// prendo i secondi del countdown alle 9:30:00
+
+let countdown = new Date();
+
+countdown.getDate(currentDate.getDate() + 1);
+
+countdown.getHours(9);
+
+countdown.getMinutes(30);
+
+countdown.getSeconds(0);
+
+// creo una funzione che trova la differenza tra currentDate countdown
+
+function timeLeft (){
+    let differenceTime = countdown.getTime() - currentDate.getTime();
+}
